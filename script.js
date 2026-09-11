@@ -5,7 +5,7 @@
 // object with the score.
 
 var CONFIG = {
-  webhookUrl: 'https://tupeai.app.n8n.cloud/webhook/master-pipeline'
+  webhookUrl: 'https://tupeai.app.n8n.cloud/webhook-test/master-pipeline'
 };
 
 (function () {
