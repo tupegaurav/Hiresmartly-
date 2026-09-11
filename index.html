@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HireSmartly — score a resume against a job description</title>
+<meta name="description" content="Paste a job description and a resume to get an instant AI match score, strengths, and gaps." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>HireSmartly</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    <nav class="primary-nav">
+      <a href="index.html">Score a match</a>
+      <a href="about.html">How it works</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">resume screening, on demand</p>
+      <h1>Screen a resume in the time it takes to read one.</h1>
+      <p class="lede">Paste in a job description and a candidate's resume. HireSmartly reads both, checks the match, and hands back a score with the reasoning behind it — no spreadsheet required.</p>
+    </div>
+  </section>
+
+  <section class="scorer">
+    <div class="wrap">
+      <form id="scorer-form" class="case-file">
+        <div class="field-grid">
+          <div class="field">
+            <label for="jd-text">Job description <span class="req">required</span></label>
+            <textarea id="jd-text" name="jd_text" placeholder="Paste the full job posting here…" required></textarea>
+          </div>
+          <div class="field">
+            <label for="resume-text">Candidate resume <span class="req">required</span></label>
+            <textarea id="resume-text" name="resume_text" placeholder="Paste the candidate's resume text here…" required></textarea>
+          </div>
+        </div>
+        <div class="form-footer">
+          <button type="submit" class="run" id="run-button">Score this match</button>
+          <span class="status-line" id="status-line" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="results" id="results" hidden>
+    <div class="wrap">
+      <div class="results-inner">
+        <div class="verdict">
+          <div class="score-number" id="score-number">0<small>/100</small></div>
+          <span class="stamp" id="stamp">Unknown</span>
+        </div>
+        <div class="detail">
+          <h3>Reasoning</h3>
+          <p class="reasoning" id="reasoning"></p>
+          <div class="chip-cols">
+            <div>
+              <h3>Strengths</h3>
+              <ul class="chip-list strengths" id="strengths-list"></ul>
+            </div>
+            <div>
+              <h3>Gaps</h3>
+              <ul class="chip-list gaps" id="gaps-list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>HireSmartly — built on n8n, Groq, and Google Sheets.</p>
+    <p><a href="about.html">How the pipeline works →</a></p>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
