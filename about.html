@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How HireSmartly works</title>
+<meta name="description" content="How HireSmartly reads a job description and a resume, and turns them into a match score." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>HireSmartly</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    <nav class="primary-nav">
+      <a href="index.html">Score a match</a>
+      <a href="about.html">How it works</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero compact">
+    <div class="wrap">
+      <p class="kicker">under the hood</p>
+      <h1>Three readings, one verdict.</h1>
+      <p class="lede">Every submission passes through three separate readings before you see a number. Each one has a single job, so the final score is easy to trust and easy to check.</p>
+    </div>
+  </section>
+
+  <section class="pipeline">
+    <div class="wrap">
+      <h2>What happens when you click "Score this match"</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="num">1</span>
+          <div>
+            <h3>The job description gets structured</h3>
+            <p>The posting is read once and turned into a short profile: title, seniority, required skills, nice-to-have skills, minimum experience, and the core responsibilities — the same shorthand a recruiter would jot down after a first read.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <div>
+            <h3>The resume gets structured the same way</h3>
+            <p>The candidate's resume is read and reduced to the facts that matter for matching: name, total years of experience, core skills, most recent role, and education.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <div>
+            <h3>The two profiles are compared</h3>
+            <p>Skills, experience, and seniority are weighed against each other directly, and the result comes back as a score out of 100, a plain-language verdict, and the specific strengths and gaps that led to it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stack">
+    <div class="wrap">
+      <h2>What it's built on</h2>
+      <div class="stack-grid">
+        <div class="stack-item">
+          <p class="label">automation</p>
+          <p>The three readings run as connected workflows, so a single submission triggers all of them in sequence automatically.</p>
+        </div>
+        <div class="stack-item">
+          <p class="label">language model</p>
+          <p>Each reading is done by an AI model — the same one for all three steps, so the job description and resume are judged by consistent standards.</p>
+        </div>
+        <div class="stack-item">
+          <p class="label">record keeping</p>
+          <p>Every parsed job description, parsed resume, and match score is logged to a spreadsheet, so nothing scored today is lost by tomorrow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>HireSmartly — built on n8n, Groq, and Google Sheets.</p>
+    <p><a href="index.html">← Back to the scorer</a></p>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
