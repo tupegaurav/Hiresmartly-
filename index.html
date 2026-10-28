@@ -23,9 +23,9 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <p class="kicker">resume screening, on demand</p>
+      <p class="kicker">resume screening and coaching, on demand</p>
       <h1>Screen a resume in the time it takes to read one.</h1>
-      <p class="lede">Paste in a job description and a candidate's resume. HireSmartly reads both, checks the match, and hands back a score with the reasoning behind it — no spreadsheet required.</p>
+      <p class="lede">Paste in a job description and a candidate's resume. Five AI agents read both, check every requirement against the evidence, and hand back a score, the gaps behind it, and a plan to close them.</p>
     </div>
   </section>
 
@@ -44,6 +44,7 @@
         </div>
         <div class="form-footer">
           <button type="submit" class="run" id="run-button">Score this match</button>
+          <button type="button" class="ghost" id="sample-button">Try sample data</button>
           <span class="status-line" id="status-line" role="status" aria-live="polite"></span>
         </div>
       </form>
@@ -52,6 +53,7 @@
 
   <section class="results" id="results" hidden>
     <div class="wrap">
+      <p class="case-ref" id="case-ref"></p>
       <div class="results-inner">
         <div class="verdict">
           <div class="score-number" id="score-number">0<small>/100</small></div>
@@ -72,6 +74,29 @@
           </div>
         </div>
       </div>
+
+      <div class="panel">
+        <h2>Requirement breakdown</h2>
+        <ul class="req-list" id="req-list"></ul>
+      </div>
+
+      <div class="panel">
+        <h2 id="coach-headline">Coaching plan</h2>
+        <div class="chip-cols">
+          <div>
+            <h3>Priority actions</h3>
+            <ol class="action-list" id="actions-list"></ol>
+          </div>
+          <div>
+            <h3>Resume improvements</h3>
+            <ul class="chip-list strengths" id="improve-list"></ul>
+            <h3 class="spaced">Interview prep</h3>
+            <ul class="chip-list strengths" id="prep-list"></ul>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="ghost" id="copy-json">Copy full report as JSON</button>
     </div>
   </section>
 </main>
